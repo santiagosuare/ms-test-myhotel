@@ -31,7 +31,7 @@ public class EmpleadosController {
     }
 
     @Operation(summary = "Obtener el empleado con el mayor sueldo por departamento")
-    @GetMapping("/getMayorSueldoDepartamento")
+    @GetMapping("/getMayorSueldoEmpleado")
     public ResponseEntity<List<EmpleadoSalarioResponse>> getMayorSueldoEmpleado() {
         return ResponseEntity.ok(empleadoService.getMayorSueldoEmpleado());
     }
@@ -49,7 +49,7 @@ public class EmpleadosController {
     }
 
     @Operation(summary = "Obtener la siguiente información agrupada por país: cantidad empleados, salario promedio, salario más alto, salario más bajo, promedio años antigüedad")
-    @GetMapping("/getEmpleadoPorPais")
+    @GetMapping("/getEmpleadosPorPais")
     public ResponseEntity<List<EmpleadoPaisResponse>> getEmpleadosPorPais() {
         return ResponseEntity.ok(empleadoService.getEmpleadosPorPais());
     }
